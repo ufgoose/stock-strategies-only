@@ -24,8 +24,9 @@ MIN_PRICE_ROWS = 60               # 少於此列數視為新股／資料不足
 FUTURES_ID = "TX"
 
 CONFIG = {
-    "eps_threshold": 5.0,
-    "roe_threshold": 15.0,
+    # 放寬基本面門檻，改以純技術動能突破為主（避免刷掉剛起漲的轉機股或題材股）
+    "eps_threshold": -999.0,
+    "roe_threshold": -999.0,
     "backtest_years": 3,
     "hold_days": 20,
     "target_return": 0.10,
